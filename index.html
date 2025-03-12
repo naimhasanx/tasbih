@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>তাসবিহ পড়ার ওয়েবসাইট</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .tasbih {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #ecf0f1;
+            border-radius: 5px;
+        }
+        .tasbih h2 {
+            color: #e67e22;
+        }
+        .tasbih p {
+            font-size: 1.2em;
+            color: #16a085;
+        }
+        .counter {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #c0392b;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #27ae60;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2ecc71;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #7f8c8d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>তাসবিহ পড়ার ওয়েবসাইট</h1>
+
+        <!-- হাসবুনাল্লাহু ওয়া নিইমাল ওয়াকিল -->
+        <div class="tasbih">
+            <h2>হাসবুনাল্লাহু ওয়া নিইমাল ওয়াকিল</h2>
+            <p>حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ، نِعْمَ الْمَوْلَىٰ وَنِعْمَ النَّصِيرُ</p>
+            <p>অর্থ: আল্লাহই আমাদের জন্য যথেষ্ট এবং তিনি উত্তম অভিভাবক, তিনি উত্তম মাওলা এবং উত্তম সাহায্যকারী।</p>
+            <div class="counter" id="counter1">0</div>
+            <button onclick="countTasbih('counter1')">তাসবিহ পড়ুন</button>
+        </div>
+
+        <!-- হাসবিয়াল্লাহ -->
+        <div class="tasbih">
+            <h2>হাসবিয়াল্লাহ</h2>
+            <p>حَسْبِيَ اللَّهُ لا إِلَـهَ إِلاَّ هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p>
+            <p>অর্থ: আল্লাহই আমার জন্য যথেষ্ট, তিনি ছাড়া কোনো ইলাহ নেই, আমি তাঁর উপরই ভরসা করি এবং তিনি মহান আরশের মালিক।</p>
+            <div class="counter" id="counter2">0</div>
+            <button onclick="countTasbih('counter2')">তাসবিহ পড়ুন</button>
+        </div>
+
+        <!-- দুরুদ শরীফ -->
+        <div class="tasbih">
+            <h2>দুরুদ শরীফ</h2>
+            <p>اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
+            <p>অর্থ: হে আল্লাহ, মুহাম্মদ (সা.) এবং তাঁর পরিবারের উপর রহমত বর্ষণ করুন।</p>
+            <div class="counter" id="counter3">0</div>
+            <button onclick="countTasbih('counter3')">তাসবিহ পড়ুন</button>
+        </div>
+
+        <div class="footer">
+            <p>এই ওয়েবসাইটটি তৈরি করা হয়েছে তাসবিহ পড়ার জন্য।</p>
+        </div>
+    </div>
+
+    <script>
+        function countTasbih(counterId) {
+            let counterElement = document.getElementById(counterId);
+            let currentCount = parseInt(counterElement.innerText);
+            counterElement.innerText = currentCount + 1;
+        }
+    </script>
+</body>
+</html>
